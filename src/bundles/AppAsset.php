@@ -19,6 +19,7 @@ class AppAsset extends AssetBundle
         'css/jquery-ui.css',
         'font-awesome/css/font-awesome.css',
         'css/animate.min.css',
+        'css/bootstrap.rtl.min.css',
     ];
 
     public $js = [
@@ -37,6 +38,7 @@ class AppAsset extends AssetBundle
         'js/due-date.js', // مهلت زمانی
         'js/attach.js', // آپلود فایل
         'js/ajax-modal-popup.js',
+        'js/bootstrap.bundle.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
