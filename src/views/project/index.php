@@ -18,7 +18,9 @@ use yii\helpers\Html;
             <a href="#" class="icon-list" onclick="return showPopOverTeam(this);" data-pop-id="#pop-menu-team" title="<?= Module::t("module","Create New Team") ?>"><i class="fa fa-plus" data-pop-id="#pop-menu-team"></i> </a>
         </li>
         <li>
-            <a href="#" class="icon-list" onclick="return showPopOverTeam(this);" data-pop-id="#pop-menu-team" title="<?= Module::t("module","Create New Team") ?>"><i class="fa fa-plus" data-pop-id="#pop-menu-team"></i> </a>
+            <a href="#" class="icon-list" onclick="return showPopOverTeam(this);" data-pop-id="#pop-menu-filter">
+                <?= Module::t('module', 'Filter')?>
+            </a>
         </li>
     </nav>
     <?= $this->render('_top_bar',['project' => $project]); ?>
@@ -29,6 +31,7 @@ use yii\helpers\Html;
     <?= $this->render('_modal'); ?>
     <?= $this->render('_pop_over_team',['project'=>$project]); ?>
     <?= $this->render('_pop_over_right_menu',['project'=>$project]); ?>
+    <?= $this->render('_pop_over_filter',['project'=>$project]); ?>
 
 </div>
 

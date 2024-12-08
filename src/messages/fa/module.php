@@ -19,6 +19,7 @@
 return [
     'Activity' => 'فعالیت',
     'Add Comment' => 'افزودن نظر',
+    'Filter' => 'فیلتر',
     'Add New User' => 'افزودن کاربر جدید',
     'Add This User To Team' => 'اضافه کردن این کاربر به تیم',
     'Add an item' => 'افزودن یک آیتم',

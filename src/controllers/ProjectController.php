@@ -16,6 +16,7 @@ use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\AjaxFilter;
+use hesabro\trello\models\ProjectSearch;
 
 /**
  * ProjectController implements the CRUD actions for Project model.
@@ -64,6 +65,13 @@ class ProjectController extends Controller
      */
     public function actionIndex($p_id)
     {
+        if ($model->access(Yii::$app->user->id)) {
+            $searchModelProject = new ProjectSearch();
+            $dataProviderProject = $searchModelProject->search(Yii::$app->request->queryParams);
+        }
+
+        
+
         $project=$this->findModel($p_id);
         $statuses=$project->getProjectStatuses()->active()->orderBy('s_order')->all();// لیست های فعال
         $archive_statuses=$project->getProjectStatuses()->deActive()->orderBy('s_order')->all(); // لیست های آرشیو شده
